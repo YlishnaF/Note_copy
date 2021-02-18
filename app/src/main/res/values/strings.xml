@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="title">Заголовок</string>
+    <string name="body_text">Текст заметки</string>
+    <string name="new_note_title">New note</string>
+    <string name="ok_bth_title">ok</string>
+</resources>
