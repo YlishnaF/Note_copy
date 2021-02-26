@@ -6,8 +6,7 @@ import com.example.myapplication.data.model.Note
 import com.example.myapplication.data.model.RemoteDataProvider
 import com.example.myapplication.extensions.MyLog
 
-object Repository {
-    private val remoteDataProvider: RemoteDataProvider = FireStoreProvider()
+class Repository(private val remoteDataProvider: RemoteDataProvider) {
 
     fun getNotes() = remoteDataProvider.subscribeToAllNotes()
 
@@ -16,4 +15,6 @@ object Repository {
     fun getNoteById(id: String) = remoteDataProvider.getNoteById(id)
 
     fun getCurrentUser() = remoteDataProvider.getCurrentUSer()
+
+    fun deleteNote(noteId: String) = remoteDataProvider.deleteNote(noteId)
 }

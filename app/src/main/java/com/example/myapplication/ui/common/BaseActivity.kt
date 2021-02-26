@@ -10,7 +10,7 @@ import androidx.viewbinding.ViewBinding
 import com.example.myapplication.R
 import com.example.myapplication.extensions.MyLog
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.*
+
 
 abstract class BaseActivity<T, VS : BaseViewState<T>> : AppCompatActivity() {
     abstract val viewModel: BaseViewModel<T, VS>
@@ -21,10 +21,10 @@ abstract class BaseActivity<T, VS : BaseViewState<T>> : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(ui.root)
 
-        viewModel.getViewSate().observe(this, Observer<VS> { t->
+        viewModel.getViewSate().observe(this, Observer<VS> { t ->
             t?.apply {
                 data?.let { renderData(it) }
-                error?.let{ renderError(it)}
+                error?.let { renderError(it) }
             }
         })
     }

@@ -10,7 +10,7 @@ import com.example.myapplication.data.model.NoteResult
 import com.example.myapplication.extensions.MyLog
 import com.example.myapplication.ui.common.BaseViewModel
 
-class MainViewModel(val repository: Repository = Repository) :
+class MainViewModel(val repository: Repository) :
     BaseViewModel<List<Note>?, MainViewState>() {
 
     private val notesObserver = object : Observer<NoteResult> {

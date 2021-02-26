@@ -5,7 +5,7 @@ import com.example.myapplication.data.model.NoAuthException
 import com.example.myapplication.ui.common.BaseViewModel
 
 
-class SplashViewModel(private val  repository : Repository = Repository) :
+class SplashViewModel(private val  repository : Repository) :
     BaseViewModel<Boolean?, SplashViewState>(){
 
     fun requestUser(){
